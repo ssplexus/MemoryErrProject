@@ -1,8 +1,15 @@
 import java.util.Scanner;
 import java.util.function.Supplier;
 
+/**
+ * Класс консольного меню
+ */
 public class Menu
 {
+    /*
+        В конструктор передаётся число опций и текст меню,
+        возвращается выбранная опция
+     */
     public static int getMenu(int numOptions, Supplier<String> menu)
     {
         int command;

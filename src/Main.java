@@ -12,9 +12,9 @@ public class Main
         {
             try
             {
-                switch (command = getTestMenu())
+                switch (command = getTestMenu()) // главное меню
                 {
-                    case 3:
+                    case 3: // вызов утечки памяти через статическое поле
                         System.out.println("Enter number of threads: ");
                         num = getNumber();
                         while(num-- > 0)
@@ -28,15 +28,15 @@ public class Main
                             }
                         }
                         break;
-                    case 2:
+                    case 2: // вызов переполнения кучи
                         num = getNumber();
                         System.out.printf("Func(%d) = %d\n", num, MemoryErrorClass.memErrorFuncHeap(num));
                         break;
-                    case 1:
+                    case 1: // вызов переполнения стека
                         num = getNumber();
                         System.out.printf("Func(%d) = %d\n", num, MemoryErrorClass.memErrorFuncStack(num));
                         break;
-                    case 0:
+                    case 0: // выход
                         return;
                 }
             }
